@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 export const ImageGalleryItem = ({
-  id,
   webformatURL,
   largeImageURL,
   tags,
   openModal,
 }) => {
   return (
-    <li key={id}>
+    <li>
       <img
         loading="lazy"
         src={webformatURL}
@@ -23,7 +22,6 @@ export const ImageGalleryItem = ({
 };
 
 ImageGalleryItem.propTypes = {
-  id: PropTypes.number.isRequired,
   tags: PropTypes.string.isRequired,
   webformatURL: PropTypes.string.isRequired,
   largeImageURL: PropTypes.string.isRequired,
